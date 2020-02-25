@@ -1,0 +1,9 @@
+.demo-button {
+  font-size: $font-size-small;
+
+  &__primary {
+    background: #fff;
+    color: #333;
+    font-size: 48px;
+  }
+}
