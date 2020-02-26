@@ -1,5 +1,38 @@
 # base-vue-tsx-template
 
+## 目录结构说明
+
+```
+|-- AboutStudy
+    |-- .env.development  # 开发环境配置
+    |-- .env.production   # 生成环境配置
+    |-- .eslintrc.js
+    |-- babel.config.js
+    |-- jest.config.js
+    |-- package.json
+    |-- tsconfig.json
+    |-- vue.config.js     # vue 配置
+    |-- public
+    |-- src
+    |   |-- App.tsx
+    |   |-- declaration.d.ts  # scss声明文件
+    |   |-- main.ts           # 入口文件
+    |   |-- shims-vue.d.ts    # vue声明文件
+    |   |-- api               # api文件 包括axios配置
+    |   |-- assets            # 资源文件
+    |   |-- components        # 组件
+    |   |-- decorator         # 装饰器
+    |   |-- helper            # 常用工具方法
+    |   |-- mixins            # vue mixin
+    |   |-- router            # 路由
+    |   |-- scss              # 通用样式 变量 mixin
+    |   |-- store             # vuex
+    |   |-- types             # 方法type interface
+    |   |-- views             # 页面
+    |-- tests                 # 测试
+
+```
+
 ## Project setup
 ```
 yarn install

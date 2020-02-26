@@ -2,9 +2,12 @@
  * @Author: ZhengXiaowei
  * @Date: 2020-02-24 18:53:48
  * @LastEditors: ZhengXiaowei
- * @LastEditTime: 2020-02-24 19:03:04
+ * @LastEditTime: 2020-02-26 14:35:50
  * @Description: scss变量
  * @FilePath: /src/scss/variables.scss
  */
+// 导入一些常用mixin
+@import "./mixins.scss";
 
+// 变量
 $font-size-small: 24px;
