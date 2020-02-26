@@ -12,20 +12,20 @@ import styles from "./button.module.scss";
 const cx = classNames.bind(styles);
 const systemStore = namespace("system");
 
-export enum ButtonType {
+export enum BType {
   default = "default",
   primary = "primary"
 }
 
 interface ButtonProps {
-  type?: ButtonType;
+  type?: BType;
   text?: String;
-  btnClick: Function;
+  btnClick?: Function;
 }
 
 @Component
 export default class ZButton extends tsc.Component<ButtonProps> {
-  @Prop({ default: ButtonType.default }) public type!: ButtonType;
+  @Prop({ default: "primary" }) public type!: string;
   @Prop() public text!: String;
   @systemStore.State("user") user!: SystemGetterUser;
   @systemStore.Action("userLogin") cacheUserInfo: any;
@@ -43,8 +43,8 @@ export default class ZButton extends tsc.Component<ButtonProps> {
 
   protected render() {
     let className = cx({
-      "demo-button": this.type === ButtonType.default,
-      "demo-button__primary": this.type === ButtonType.primary
+      "demo-button": this.type === BType.default,
+      "demo-button__primary": this.type === BType.primary
     });
     return (
       <div>

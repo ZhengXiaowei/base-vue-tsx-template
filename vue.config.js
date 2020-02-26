@@ -2,7 +2,7 @@
  * @Author: ZhengXiaowei
  * @Date: 2020-02-24 17:19:06
  * @LastEditors: ZhengXiaowei
- * @LastEditTime: 2020-02-24 18:54:42
+ * @LastEditTime: 2020-02-26 17:03:56
  * @Description: vue 全局配置
  * @FilePath: /vue.config.js
  */
@@ -53,7 +53,7 @@ const cdns = {
   }
 };
 
-const ossCDN = "/";
+const ossCDN = "./";
 
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? ossCDN : "/",
@@ -94,7 +94,7 @@ module.exports = {
   // * 打包忽略项
   configureWebpack: {
     devtool: "source-map",
-    externals: process.env.NODE_ENV === "production" ? externals : {},
+    // externals: process.env.NODE_ENV === "production" ? externals : {},
     resolve: {
       extensions: [".js", ".vue", ".json", ".ts", ".tsx"] // 加入ts 和 tsx
     }
