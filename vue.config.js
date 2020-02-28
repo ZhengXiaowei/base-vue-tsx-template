@@ -2,7 +2,7 @@
  * @Author: ZhengXiaowei
  * @Date: 2020-02-24 17:19:06
  * @LastEditors: ZhengXiaowei
- * @LastEditTime: 2020-02-26 17:03:56
+ * @LastEditTime: 2020-02-28 22:38:02
  * @Description: vue 全局配置
  * @FilePath: /vue.config.js
  */
@@ -64,6 +64,7 @@ module.exports = {
 
   lintOnSave: false,
   productionSourceMap: true,
+  parallel: false, // ts-loader不支持多线程 ts下打包会丢失三方组件样式
   devServer: {
     // * 接口跨域处理
     proxy: {
