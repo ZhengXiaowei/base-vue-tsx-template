@@ -2,7 +2,7 @@
  * @Author: ZhengXiaowei
  * @Date: 2020-02-25 17:34:04
  * @LastEditors: ZhengXiaowei
- * @LastEditTime: 2020-02-25 19:37:38
+ * @LastEditTime: 2020-03-05 09:42:51
  * @Description: 自定义装饰器方法
  * @FilePath: /src/decorator/index.ts
  */
@@ -19,9 +19,9 @@ export const api = (promise: Function) => {
     descriptor.value = async function() {
       try {
         let result = await promise();
-        oldValue.call(this, result);
+        oldValue.call(this, ...arguments)(result);
       } catch (e) {
-        oldValue.call(this, {}, e);
+        oldValue.call(this, ...arguments)({}, e);
       }
     };
   };

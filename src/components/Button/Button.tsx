@@ -36,9 +36,11 @@ export default class ZButton extends tsc.Component<ButtonProps> {
   }
 
   @api(demoApi)
-  protected getResult(res?: string) {
+  protected getResult() {
     // 获取api调用结果
-    console.log(res);
+    return (res?: string) => {
+      console.log(res);
+    };
   }
 
   protected render() {
@@ -49,6 +51,8 @@ export default class ZButton extends tsc.Component<ButtonProps> {
     return (
       <div>
         <p class={className}>user: {this.user.name}</p>
+        {this.$slots.default || "组件默认slot内容"}
+        {this.$slots.com_name_slot || "组件中的具名slot"}
         <van-button type={this.type} onClick={() => this.getResult()}>
           {this.text || "我是按钮"}
         </van-button>
